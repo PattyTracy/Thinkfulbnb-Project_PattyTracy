@@ -1,10 +1,8 @@
 /* -------  General Styles ------- */
-body {
-  box-sizing: border-box;
-}
 
 body {
   font-family: "Lato", sans-serif;
+  box-sizing: border-box;
 }
 
 h2 {
@@ -106,6 +104,7 @@ header nav ul {
   padding-left: 0;
   list-style: none;
 }
+
 header nav ul li {
   display: flex;
   flex-direction: row;
@@ -125,14 +124,15 @@ header nav ul li:last-child a {
 }
 
 /* -------  Search Form ------- */
+
 form {
-  
   display: flex;
   flex-direction: column;
-  justify-content: space-between; 
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: space-around; 
   border: 2px solid #ff385c;
   padding: 20px;
-
 }
 
 form label {
@@ -146,8 +146,6 @@ form input {
   margin-bottom: 20px;
   flex: 2;
 }
-
-
 
 form button {
   display: flex;
@@ -172,13 +170,9 @@ footer p {
 }
 
 /* -------  Media Query ------- */
-@media all and (min-width: 520px) {
-  
-  header {
-    display: flex;
-    justify-content: space-between;
-    padding: 0 30px;
-  }
+@media all and (min-width: 480px) {
+
+/* -------  General Styles ------- */
 
   h2 {
     font-size: 48px;
@@ -187,15 +181,95 @@ footer p {
     text-align: center;
   }
 
-  .logo {
-    font-family: "Pangolin", cursive;
-    font-size: 72px;
+  section.alternate-background h2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  
+    margin: 20px;
+  }
+
+  section.alternate-background-host {
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    background-color: #00a699;
     color: #fff;
   }
 
+  section.ideas {
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  margin: 10px 10px;
+}
+  
+  /* ---  Groups & Items --- */
+
+  .group {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  .group-row {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    margin: 10px;
+  }
+
+  .group-about {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .item {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  margin: 5px;
+}
+
+  .item-double {
+    display: flex;
+    flex-direction: row;
+    align-self: center;    
+    width: 100%;
+  }
+
+  .item-about {
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    margin: 10px;
+  }  
+
+  .center {
+  display: flex;
+  justify-content:flex-end;
+}
+
+/* -------  Navigation ------- */
+
+  header {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 30px;
+  }
+
+  .logo {
+    display: flex;
+    font-family: "Pangolin", cursive;
+    font-size: 72px;
+    color: #fff;
+    padding-top: 25px;
+  }
+
   header nav {
-    text-size: 36px;
-    padding-top: 15px;
+    font-size: 36px;
+    padding-top: 20px;
   }
 
   header nav ul li {
@@ -211,6 +285,8 @@ footer p {
     text-decoration: none;
   }
 
+/* -------  Search Form ------- */
+
   form {
   display: flex;
   flex-direction: row;
@@ -219,78 +295,19 @@ footer p {
   border: 2px solid #ff385c;
   }
 
-  .group-row {
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-    margin: 10px;
-  }
-
-.center {
-  display: flex;
-  justify-content:flex-end;
-}
-
   form button {
+    display: flex;
     background-color: #ff385c;
     border: none;
     color: #fff;
     font-size: 24px;
-    align-self: flex-end;
+    text-align: center;
     padding: 20px 50px;
   }
 
-section.alternate-background h2 {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-
-  margin: 20px;
-}
-
-.item-double {
-  display: flex;
-  flex-direction: row;
-  align-self: center;    
-  width: 100%;
-}
-section.ideas {
-  display: flex;
-  flex-direction: row;
-  flex: 1;
-  margin: 10px 10px;
-}
-
-.group-about {
-  display: flex;
-  flex-direction: row;
-}
-
-.item-about {
-  display: flex;
-  flex-direction: row;
-  flex: 1;
-  margin: 10px;
-}
-
-.group {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-items: center;
-}
-
-.item {
-  display: flex;
-  flex-direction: column;
-  flex: 1;
-  margin: 5px;
-}
-section.alternate-background-host {
-  display: flex;
-  flex-direction: row;
-  flex: 1;
-  background-color: #00a699;
-  color: #fff;
-}
+  .group-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+  }
 }
