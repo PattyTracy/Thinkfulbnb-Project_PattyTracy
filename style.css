@@ -23,7 +23,7 @@ p {
 }
 
 section {
-  padding: 20px;
+  padding: 0px 20px;
 }
 
 section.alternate-background {
@@ -177,8 +177,9 @@ footer p {
   h2 {
     font-size: 48px;
     font-weight: 400;
-    margin: 0 10px 10px 10px;
+    margin: 20px;
     text-align: center;
+    align-items: center;
   }
 
   section.alternate-background h2 {
@@ -262,16 +263,15 @@ footer p {
 
   .logo {
     display: flex;
+    align-items: center;
     font-family: "Pangolin", cursive;
-    font-size: 72px;
-  px;
+    font-size: 64px;
     color: #fff;
-    padding-top: 25px;
   }
 
   header nav {
-    font-size: 36px;
-    padding-top: 20px;
+    font-size: 26px;
+    justify-content: center;
   }
 
   header nav ul li {
@@ -297,6 +297,12 @@ footer p {
   border: 2px solid #ff385c;
   }
 
+  form label {
+    padding-right: 5px;
+    font-weight: bold;
+    flex: 1;
+  }
+
   form button {
     display: flex;
     background-color: #ff385c;
@@ -309,7 +315,7 @@ footer p {
 
   .group-row {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: flex-start;
   }
 }
